@@ -16,6 +16,20 @@ def linked_list_to_array(LList):
     return item
 
 
+def reverse_linked_list(LList):
+    if LList.next is None:
+        return LList
+    prev_node = None
+    current_node = LList
+
+    while current_node is not None:
+        next_node = current_node.next
+        current_node.next = prev_node
+        prev_node = current_node
+        current_node = next_node
+    return prev_node
+
+
 def insert_front(LList, node):
     node.next = LList
     return node
