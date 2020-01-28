@@ -26,8 +26,10 @@ def reverse_linked_list(LList):
         next_node = current_node.next
         current_node.next = prev_node
         prev_node = current_node
-        current_node = next_node
-    return prev_node
+        if next_node is None:
+            return current_node
+        else:
+            current_node = next_node
 
 
 def insert_front(LList, node):
