@@ -88,6 +88,9 @@ def test_levelorder_traversal(tree, level, expected):
             Node(4), 2, [4, 2]
         ),
         pytest.param(
+            None, 2, [2]
+        ),
+        pytest.param(
             Node(1, Node(-1), Node(3)), 4, [1, -1, 3, 4]
         ),
     ],

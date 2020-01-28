@@ -49,6 +49,8 @@ def levelorder_traversal(tree, level):
 
 
 def insert_binary_search_tree(tree, item):
+    if tree is None:
+        return Node(item)
     if item >= tree.value:
         if tree.right is None:
             tree.right = Node(item)
